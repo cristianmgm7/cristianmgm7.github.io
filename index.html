@@ -146,15 +146,38 @@
   }
 
   @media print{
-    :root{--paper:#fff;--surface:#fff;--ink:#111;--muted:#333;--faint:#666;
-      --accent:#0a5a62;--accent-deep:#0a5a62;--line:#ccc;--tag-bg:#f2f2f2;--tag-ink:#222;--shadow:none}
+    :root{--paper:#fff;--surface:#fff;--ink:#111;--muted:#333;--faint:#555;
+      --accent:#0a5a62;--accent-deep:#0a5a62;--line:#ccc;--tag-bg:#f4f4f2;--tag-ink:#222;--shadow:none}
     .toolbar{display:none}
-    body{font-size:11.5px}
+    html,body{background:#fff}
+    body{font-size:10.5px;line-height:1.42}
     .page{max-width:none;padding:0}
-    .name{font-size:34px}
-    .grid{gap:24px;grid-template-columns:250px 1fr}
-    .proj,.achv li,.job,.block{break-inside:avoid}
-    @page{margin:14mm}
+    header{margin-bottom:15px}
+    .name{font-size:30px}
+    .role{font-size:11px;margin-top:6px}
+    .wave{height:9px;margin:9px 0 8px}
+    .contactline{font-size:10.5px}
+    .summary{font-size:11px;max-width:none;margin-top:11px;line-height:1.5}
+    /* one column, experience first — flows cleanly across pages */
+    .grid{display:flex;flex-direction:column;gap:0;margin-top:6px}
+    main{order:1;gap:12px}
+    aside{order:2;position:static;flex-direction:column;gap:11px;margin-top:12px}
+    h2.sec{font-size:12px;margin:0 0 7px;padding-bottom:5px;break-after:avoid}
+    .job{margin-bottom:1px}
+    .job-title{font-size:13.5px}
+    .job-sub{margin:2px 0 9px}
+    .achv{gap:6px}
+    .achv li{font-size:10.5px;max-width:none;line-height:1.38}
+    .stackgroup{margin-bottom:7px}
+    .stackgroup h3{margin-bottom:5px}
+    .projgrid{grid-template-columns:1fr 1fr;gap:9px}
+    .proj{padding:11px 13px;gap:5px}
+    .proj p{font-size:10px}
+    .traj .step{padding-bottom:11px}
+    footer{display:none}
+    /* keep individual items whole; let big sections span pages */
+    .achv li,.proj,.traj .step,.stackgroup,.job-head,.kv{break-inside:avoid}
+    @page{margin:10mm 13mm}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
