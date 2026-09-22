@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cristian Murillo</title>
+<meta name="description" content="Full-Stack AI Engineer building reliable AI products end-to-end across agents, backend, mobile, web, and Voice AI.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Cristian Murillo">
+<link rel="canonical" href="https://cristianmgm7.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cristian Murillo — Full-Stack AI Engineer">
+<meta property="og:description" content="Building reliable AI products end-to-end across agents, backend, mobile, web, and Voice AI.">
+<meta property="og:url" content="https://cristianmgm7.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --paper:#f6f5f2; --surface:#ffffff; --ink:#1a1c1e; --muted:#565f61;
+    --faint:#87908f; --accent:#0e7c86; --accent-deep:#0a5a62; --line:#e4e2db;
+    --tag-bg:#edf1ef; --tag-ink:#33474a; --shadow:0 1px 2px rgba(20,30,30,.05),0 6px 22px rgba(20,40,40,.05);
+    --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#101315; --surface:#181c1f; --ink:#eceae4; --muted:#a4adad;
+      --faint:#7b8586; --accent:#43bcc7; --accent-deep:#78d6de; --line:#282d30;
+      --tag-bg:#1e2427; --tag-ink:#bcd4d6; --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 22px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#101315; --surface:#181c1f; --ink:#eceae4; --muted:#a4adad;
+    --faint:#7b8586; --accent:#43bcc7; --accent-deep:#78d6de; --line:#282d30;
+    --tag-bg:#1e2427; --tag-ink:#bcd4d6; --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 22px rgba(0,0,0,.25);
+  }
+
+  *{box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+    line-height:1.5;font-size:15px;-webkit-font-smoothing:antialiased;padding:0}
+  a{color:var(--accent-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .toolbar{position:fixed;top:14px;right:14px;display:flex;gap:8px;z-index:20}
+  .toolbar button{font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--muted);background:var(--surface);
+    border:1px solid var(--line);border-radius:7px;padding:7px 11px;cursor:pointer;
+    box-shadow:var(--shadow);transition:color .15s,border-color .15s}
+  .toolbar button:hover{color:var(--accent);border-color:var(--accent)}
+  .toolbar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .page{max-width:1020px;margin:0 auto;padding:44px 30px 64px}
+
+  /* ---- header ---- */
+  header{margin-bottom:26px}
+  .name{font-family:var(--serif);font-weight:500;font-size:47px;line-height:1.02;
+    letter-spacing:-.015em;margin:0;text-wrap:balance}
+  .role{font-family:var(--mono);font-size:13.5px;font-weight:500;color:var(--accent);
+    letter-spacing:.02em;margin:9px 0 0}
+  .wave{display:block;width:100%;height:16px;margin:16px 0 15px;color:var(--accent);opacity:.85}
+  .contactline{display:flex;flex-wrap:wrap;gap:5px 16px;font-family:var(--mono);
+    font-size:12px;color:var(--muted)}
+  .contactline .sep{color:var(--line)}
+  .summary{margin:17px 0 0;max-width:66ch;color:var(--ink);font-size:15.5px;line-height:1.62}
+  .summary b{color:var(--ink);font-weight:600}
+
+  /* ---- layout ---- */
+  .grid{display:grid;grid-template-columns:288px 1fr;gap:34px;align-items:start;margin-top:30px}
+
+  h2.sec{font-family:var(--serif);font-weight:600;font-size:13px;text-transform:uppercase;
+    letter-spacing:.11em;color:var(--faint);margin:0 0 13px;padding-bottom:7px;
+    border-bottom:1px solid var(--line)}
+
+  aside{display:flex;flex-direction:column;gap:26px;position:sticky;top:26px}
+  @media print{aside{position:static}}
+  .block{}
+  .kv{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;
+    flex-direction:column;gap:6px}
+  .kv .row{display:flex;gap:8px}
+  .kv .row span:first-child{color:var(--faint);min-width:52px}
+  .kv a{color:var(--ink)}
+
+  .stackgroup{margin-bottom:14px}
+  .stackgroup:last-child{margin-bottom:0}
+  .stackgroup h3{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;
+    letter-spacing:.09em;color:var(--accent);font-weight:600;margin:0 0 7px}
+  .tags{display:flex;flex-wrap:wrap;gap:5px}
+  .tag{font-family:var(--mono);font-size:11px;background:var(--tag-bg);color:var(--tag-ink);
+    border:1px solid var(--line);border-radius:5px;padding:3px 7px;line-height:1.3}
+
+  /* trajectory */
+  .traj{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line);
+    margin-left:4px;padding-left:0}
+  .traj .step{position:relative;padding:0 0 15px 18px}
+  .traj .step:last-child{padding-bottom:0}
+  .traj .step::before{content:"";position:absolute;left:-5px;top:4px;width:8px;height:8px;
+    border-radius:50%;background:var(--accent);border:2px solid var(--paper)}
+  .traj .yr{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:600}
+  .traj .lbl{font-size:12.5px;color:var(--muted);line-height:1.4;margin-top:1px}
+
+  /* ---- main ---- */
+  main{display:flex;flex-direction:column;gap:30px;min-width:0}
+
+  .job{}
+  .job-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .job-title{font-size:17px;font-weight:700;color:var(--ink);margin:0}
+  .job-title .at{color:var(--accent);font-weight:600}
+  .job-meta{font-family:var(--mono);font-size:11.5px;color:var(--faint);white-space:nowrap}
+  .job-sub{font-size:13px;color:var(--muted);margin:3px 0 14px;font-style:italic}
+
+  .achv{display:flex;flex-direction:column;gap:12px;list-style:none;padding:0;margin:0}
+  .achv li{position:relative;padding-left:19px;font-size:14px;line-height:1.55;
+    max-width:70ch;break-inside:avoid}
+  .achv li::before{content:"";position:absolute;left:1px;top:8px;width:6px;height:6px;
+    background:var(--accent);border-radius:1.5px;transform:rotate(45deg)}
+  .achv .h{font-weight:600;color:var(--ink)}
+  .achv .n{font-family:var(--mono);font-size:11px;color:var(--faint)}
+
+  /* projects */
+  .projgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .proj{background:var(--surface);border:1px solid var(--line);border-radius:11px;
+    padding:15px 16px;box-shadow:var(--shadow);break-inside:avoid;display:flex;flex-direction:column;gap:7px}
+  .proj-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .proj-name{font-weight:700;font-size:14.5px;color:var(--ink)}
+  .proj-tag{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
+  .proj p{margin:0;font-size:12.8px;line-height:1.5;color:var(--muted)}
+  .proj .mini{display:flex;flex-wrap:wrap;gap:4px;margin-top:1px}
+  .proj .mini .tag{font-size:10px;padding:2px 6px}
+
+  .note{font-family:var(--mono);font-size:11px;color:var(--faint);
+    background:var(--tag-bg);border:1px dashed var(--line);border-radius:7px;
+    padding:9px 12px;line-height:1.5}
+  .note b{color:var(--accent)}
+
+  footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:11px;color:var(--faint);text-align:center}
+
+  @media (max-width:760px){
+    .page{padding:34px 20px 48px}
+    .name{font-size:37px}
+    .grid{grid-template-columns:1fr;gap:28px}
+    aside{position:static}
+    .projgrid{grid-template-columns:1fr}
+  }
+
+  @media print{
+    :root{--paper:#fff;--surface:#fff;--ink:#111;--muted:#333;--faint:#666;
+      --accent:#0a5a62;--accent-deep:#0a5a62;--line:#ccc;--tag-bg:#f2f2f2;--tag-ink:#222;--shadow:none}
+    .toolbar{display:none}
+    body{font-size:11.5px}
+    .page{max-width:none;padding:0}
+    .name{font-size:34px}
+    .grid{gap:24px;grid-template-columns:250px 1fr}
+    .proj,.achv li,.job,.block{break-inside:avoid}
+    @page{margin:14mm}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="themeBtn" type="button">Theme</button>
+  <button id="printBtn" type="button">Save PDF</button>
+</div>
+
+<div class="page">
+  <header>
+    <h1 class="name">Cristian Murillo</h1>
+    <p class="role">Full-Stack AI Engineer | Building Reliable AI Products End-to-End</p>
+    <svg class="wave" viewBox="0 0 400 16" preserveAspectRatio="none" aria-hidden="true">
+      <polyline fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"
+        points="0,8 10,8 16,3 22,13 28,5 34,11 40,8 52,8 58,1 64,15 70,6 76,10 82,8 96,8 102,4 108,12 114,2 120,14 126,7 132,9 138,8 152,8 158,5 164,11 170,3 176,13 182,8 196,8 202,6 208,10 214,4 220,12 226,8 240,8 246,2 252,14 258,6 264,10 270,8 286,8 292,5 298,11 304,7 310,9 316,8 332,8 338,3 344,13 350,6 356,10 362,8 378,8 384,6 390,10 400,8"/>
+    </svg>
+    <div class="contactline">
+      <span>Medellín, Colombia</span><span class="sep">/</span>
+      <span>Remote · UTC−5</span><span class="sep">/</span>
+      <a href="mailto:cristianmgm7@gmail.com">cristianmgm7@gmail.com</a><span class="sep">/</span>
+      <a href="https://github.com/cristianmgm7">github.com/cristianmgm7</a><span class="sep">/</span>
+      <a href="https://www.linkedin.com/in/cristian-mgm/">linkedin.com/in/cristian-mgm</a>
+    </div>
+    <p class="summary">I build <b>AI-powered products</b> that turn complex business processes into reliable, intuitive user experiences. I work across <b>AI agents, backend systems, workflow automation, and mobile and web applications</b> — connecting models with real data, business rules, user permissions, and production interfaces. My work has expanded products across <b>iOS, Android, macOS, and Web</b>, delivered an automation ecosystem with <b>10 actions and 10 triggers</b>, and supported secure enterprise identity and access. My background in <b>sound engineering</b>, DSP, and speech ML adds a practical Voice-AI edge.</p>
+  </header>
+
+  <div class="grid">
+    <!-- ================= SIDEBAR ================= -->
+    <aside>
+      <div class="block">
+        <h2 class="sec">Core Stack</h2>
+        <div class="stackgroup">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">Dart</span>
+            <span class="tag">JavaScript</span><span class="tag">SQL / NoSQL</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>AI, Agents &amp; LLM apps</h3>
+          <div class="tags">
+            <span class="tag">LLM app development</span><span class="tag">MCP servers</span>
+            <span class="tag">Agent gateways (Hermes)</span><span class="tag">Claude · OpenAI · Gemini</span>
+            <span class="tag">RAG · Qdrant</span><span class="tag">LangChain</span>
+            <span class="tag">Prompt / context engineering</span><span class="tag">n8n · Zapier</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>Data &amp; ML</h3>
+          <div class="tags">
+            <span class="tag">Python data stack</span><span class="tag">pandas · NumPy</span>
+            <span class="tag">scikit-learn</span><span class="tag">PyTorch</span>
+            <span class="tag">CNNs · U-Net</span><span class="tag">Spectrogram / audio ML</span>
+            <span class="tag">Jupyter</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>Backend</h3>
+          <div class="tags">
+            <span class="tag">Node.js</span><span class="tag">NestJS</span><span class="tag">MongoDB</span>
+            <span class="tag">Redis</span><span class="tag">Bull queues</span>
+            <span class="tag">WebSocket · Socket.io</span><span class="tag">REST · OpenAPI</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>Mobile / Frontend</h3>
+          <div class="tags">
+            <span class="tag">Flutter · iOS/Android/macOS/Web</span><span class="tag">flutter_bloc</span>
+            <span class="tag">Riverpod</span><span class="tag">GetIt · Injectable</span>
+            <span class="tag">GoRouter</span><span class="tag">Isar</span><span class="tag">Next.js · React</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>Audio &amp; Signals</h3>
+          <div class="tags">
+            <span class="tag">Digital Signal Processing</span><span class="tag">Acoustics · Psychoacoustics</span>
+            <span class="tag">Electroacoustics</span><span class="tag">Speech / audio ML</span>
+            <span class="tag">Sound synthesis · MIDI</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>Auth &amp; Identity</h3>
+          <div class="tags">
+            <span class="tag">OAuth2 · OIDC</span><span class="tag">Keycloak</span><span class="tag">IdP federation / SSO</span>
+            <span class="tag">JWT · PAT</span><span class="tag">SCIM</span><span class="tag">Firebase Auth</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>Platform &amp; Practices</h3>
+          <div class="tags">
+            <span class="tag">Docker</span><span class="tag">GitHub Actions CI/CD</span>
+            <span class="tag">OpenTelemetry</span><span class="tag">AWS</span>
+            <span class="tag">Clean Architecture · DDD</span><span class="tag">Offline-first sync</span>
+            <span class="tag">Mutation testing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">Trajectory</h2>
+        <div class="traj">
+          <div class="step"><div class="yr">Foundation</div><div class="lbl">Ingeniería de Sonido — DSP, acoustics, signals &amp; a full math/physics/electronics core</div></div>
+          <div class="step"><div class="yr">2023 — Present</div><div class="lbl">Independent software &amp; applied AI — data/ML, audio deep learning, mobile products, and agent prototypes</div></div>
+          <div class="step"><div class="yr">Jan — Sep 2025</div><div class="lbl">TrackFlow at Skill Stackers — Flutter, Clean Architecture, offline-first sync, and native macOS</div></div>
+          <div class="step"><div class="yr">Jan 2026 — Present</div><div class="lbl">Full-stack product engineering and production AI integrations at Carbon Voice</div></div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">Languages</h2>
+        <div class="kv">
+          <div class="row"><span>Spanish</span><span>Native</span></div>
+          <div class="row"><span>English</span><span>Professional — fluent technical</span></div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">Education</h2>
+        <div class="kv">
+          <div class="row" style="display:block"><b style="color:var(--ink)">Ingeniero de Sonido</b> — BSc, Sound Engineering<br>
+          <span style="color:var(--muted)">Universidad de San Buenaventura, Medellín · Class of 2018 · 177 credits / 10 semesters</span></div>
+          <div class="row" style="display:block;margin-top:8px;color:var(--muted);font-size:11.5px;line-height:1.5">Relevant coursework: <span style="color:var(--tag-ink)">Digital Signal Processing · Acoustics &amp; Psychoacoustics · Electroacoustics · Probability &amp; Statistics · Linear Algebra · Differential Equations · Numerical Methods · Circuits &amp; Digital Electronics · Programming</span></div>
+          <div class="row" style="display:block;margin-top:8px;color:var(--faint)">+ self-directed specialization in mobile, backend &amp; applied AI</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <section class="job">
+        <h2 class="sec">Experience</h2>
+        <div class="job-head">
+          <p class="job-title">Software Engineer <span class="at">· Carbon Voice</span></p>
+          <span class="job-meta">Jan 2026 — Present · San Francisco, CA · Remote</span>
+        </div>
+        <p class="job-sub">Building AI-powered product capabilities end-to-end across mobile, web, backend, and integrations for a voice-first collaboration platform.</p>
+        <ul class="achv">
+          <li><span class="h">Expanded the product across four platforms:</span> iOS, Android, macOS, and Web, delivering capabilities across messaging, workspaces, authentication, voice workflows, onboarding, and administration.</li>
+          <li><span class="h">Built identity and access systems for enterprise use cases,</span> including federated authentication, SSO discovery, permissions, and secure session continuity.</li>
+          <li><span class="h">Created a workflow automation ecosystem with 10 actions and 10 triggers,</span> enabling teams to connect communication workflows with external tools.</li>
+          <li><span class="h">Developed agent and MCP integrations</span> with user-controlled permissions, approval flows, and real-time status, helping move AI capabilities from prototypes into safe production use.</li>
+          <li><span class="h">Improved operational visibility and platform reliability</span> through internal administration tools, real-time services, and observability.</li>
+          <li><span class="h">Extended product distribution</span> through shareable web experiences and an embeddable audio player.</li>
+        </ul>
+      </section>
+
+      <section class="job">
+        <div class="job-head">
+          <p class="job-title">Independent Software &amp; AI Developer <span class="at">· Independent Projects</span></p>
+          <span class="job-meta">2023 — Present · Remote</span>
+        </div>
+        <p class="job-sub">Building independent software and applied AI products while developing end-to-end expertise across data, machine learning, mobile, backend, and agent integrations.</p>
+        <ul class="achv">
+          <li><span class="h">Built Kairos, an AI-powered journal product</span> using Flutter, Firebase, Genkit/Gemini, memory, retrieval, and tool-calling workflows.</li>
+          <li><span class="h">Developed production-oriented foundations</span> spanning Clean Architecture, dependency injection, navigation, design systems, API error handling, multiple environments, and CI.</li>
+          <li><span class="h">Created applied-AI prototypes</span> in speech denoising, MCP, Google ADK, retrieval, memory, tool calling, and agent-to-UI patterns.</li>
+        </ul>
+      </section>
+
+      <section class="job">
+        <div class="job-head">
+          <p class="job-title">Flutter Developer <span class="at">· Skill Stackers</span></p>
+          <span class="job-meta">Jan — Sep 2025 · Valletta, Malta · Remote</span>
+        </div>
+        <p class="job-sub">Built TrackFlow, a cross-platform music collaboration product for artists and producers using Flutter.</p>
+        <ul class="achv">
+          <li><span class="h">Designed 25 feature modules</span> around Clean Architecture and domain-driven principles.</li>
+          <li><span class="h">Implemented offline-first synchronization</span> with a pending-operations queue, background coordination, and version-based conflict resolution.</li>
+          <li><span class="h">Delivered audio and native macOS capabilities,</span> including waveform playback and components integrated with the Flutter application.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="sec">Selected Projects</h2>
+        <div class="projgrid">
+          <div class="proj">
+            <div class="proj-head"><span class="proj-name">Kairos</span><span class="proj-tag">Applied AI · Flutter</span></div>
+            <p>AI-powered journal product combining a cross-platform Flutter experience with Firebase and <b>Genkit/Gemini</b>. Explores memory, retrieval and tool-calling workflows to turn personal context into useful, user-controlled assistance.</p>
+            <div class="mini"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Genkit</span><span class="tag">Gemini</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><span class="proj-name">PyTorch Speech Denoiser</span><span class="proj-tag">ML · take-home</span></div>
+            <p>Spectral <b>U-Net</b> predicting a mask on STFT magnitudes, reusing noisy phase for reconstruction. Reproducible train/val/test pipeline with <b>held-out noise types</b> to test generalization; SNR &amp; SI-SDR metrics, checkpoints, design report. The bridge from ML into a voice-domain role.</p>
+            <div class="mini"><span class="tag">PyTorch</span><span class="tag">torchaudio</span><span class="tag">librosa</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><span class="proj-name">Flutter Blueprint</span><span class="proj-tag">Open source</span></div>
+            <p>Production-ready Flutter starter codifying Clean Architecture, GetIt/Injectable DI, GoRouter, a full Material 3 design-token system, Dio + <code>Result</code> error handling, multi-flavor builds and CI — the reusable foundation behind several apps.</p>
+            <div class="mini"><span class="tag">flavorizr</span><span class="tag">very_good_analysis</span><span class="tag">GH Actions</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><span class="proj-name">Agent Experiments</span><span class="proj-tag">Applied AI</span></div>
+            <p>Multi-agent prototypes on <b>Google ADK</b> (Python) and an MCP/TypeScript counterpart, plus <em>a2ui</em> (agent-to-UI) — exploring agent orchestration, tool use and MCP ahead of the production integration work.</p>
+            <div class="mini"><span class="tag">Google ADK</span><span class="tag">MCP</span><span class="tag">OpenAPI</span></div>
+          </div>
+        </div>
+      </section>
+
+      <footer>Cristian Murillo · Full-Stack AI Engineer · Medellín, Colombia · updated 2026</footer>
+    </main>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var root=document.documentElement;
+    function sysDark(){return window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;}
+    var cur=null; // null = follow system
+    var btn=document.getElementById('themeBtn');
+    btn.addEventListener('click',function(){
+      var isDark = cur ? cur==='dark' : sysDark();
+      cur = isDark ? 'light' : 'dark';
+      root.setAttribute('data-theme',cur);
+    });
+    document.getElementById('printBtn').addEventListener('click',function(){window.print();});
+  })();
+</script>
+</body>
+</html>
