@@ -65,6 +65,9 @@
   .contactline .sep{color:var(--line)}
   .summary{margin:17px 0 0;max-width:66ch;color:var(--ink);font-size:15.5px;line-height:1.62}
   .summary b{color:var(--ink);font-weight:600}
+  .focus{margin:13px 0 0;max-width:72ch;font-family:var(--mono);font-size:11.5px;
+    color:var(--muted);line-height:1.6}
+  .focus b{color:var(--accent);font-weight:600}
 
   /* ---- layout ---- */
   .grid{display:grid;grid-template-columns:288px 1fr;gap:34px;align-items:start;margin-top:30px}
@@ -158,6 +161,7 @@
     .wave{height:9px;margin:9px 0 8px}
     .contactline{font-size:10.5px}
     .summary{font-size:11px;max-width:none;margin-top:11px;line-height:1.5}
+    .focus{font-size:9.5px;max-width:none;margin-top:8px;line-height:1.5}
     /* one column, experience first — flows cleanly across pages */
     .grid{display:flex;flex-direction:column;gap:0;margin-top:6px}
     main{order:1;gap:12px}
@@ -183,6 +187,7 @@
 </style>
 </head>
 <body>
+
 <div class="toolbar">
   <button id="themeBtn" type="button">Theme</button>
   <button id="printBtn" type="button">Save PDF</button>
@@ -203,7 +208,8 @@
       <a href="https://github.com/cristianmgm7">github.com/cristianmgm7</a><span class="sep">/</span>
       <a href="https://www.linkedin.com/in/cristian-mgm/">linkedin.com/in/cristian-mgm</a>
     </div>
-    <p class="summary">I build <b>AI-powered products</b> that turn complex business processes into reliable, intuitive user experiences. I work across <b>AI agents, backend systems, workflow automation, and mobile and web applications</b> — connecting models with real data, business rules, user permissions, and production interfaces. My work has expanded products across <b>iOS, Android, macOS, and Web</b>, delivered an automation ecosystem with <b>10 actions and 10 triggers</b>, and supported secure enterprise identity and access. My background in <b>sound engineering</b>, DSP, and speech ML adds a practical Voice-AI edge.</p>
+    <p class="summary">Full-stack engineer building <b>AI-powered products end-to-end</b> — from <b>LLM agents, reasoning loops, MCP, and RAG</b> to the backend, mobile, and web that put them in front of users. At Carbon Voice I ship agent and automation features into production with <b>user-controlled permissions, guardrails, and evals</b>, on top of enterprise-grade <b>identity/auth</b> and delivery across <b>iOS, Android, macOS, and Web</b>. A background in <b>sound engineering</b>, DSP, and speech ML adds a practical Voice-AI edge.</p>
+    <p class="focus"><b>Focus:</b> Agentic AI engineering · LLM agents &amp; reasoning loops · Google ADK · MCP · hybrid RAG · prompt &amp; context engineering · tool-calling &amp; guardrails · agent evals &amp; LLM-as-judge · testing automation · Python · TypeScript · NestJS · Flutter · Voice AI</p>
   </header>
 
   <div class="grid">
@@ -212,19 +218,29 @@
       <div class="block">
         <h2 class="sec">Core Stack</h2>
         <div class="stackgroup">
-          <h3>Languages</h3>
+          <h3>AI, Agents &amp; LLM apps</h3>
           <div class="tags">
-            <span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">Dart</span>
-            <span class="tag">JavaScript</span><span class="tag">SQL / NoSQL</span>
+            <span class="tag">LLM agents · reasoning loops</span><span class="tag">Tool-calling · function calling</span>
+            <span class="tag">Google ADK</span><span class="tag">MCP servers</span>
+            <span class="tag">Agent gateways (Hermes)</span><span class="tag">Multi-agent orchestration</span>
+            <span class="tag">Claude · OpenAI · Gemini</span><span class="tag">Hybrid RAG · Qdrant</span>
+            <span class="tag">LangChain · LangGraph</span><span class="tag">Prompt / context engineering</span>
+            <span class="tag">Guardrails · permission boundary</span><span class="tag">n8n · Zapier</span>
           </div>
         </div>
         <div class="stackgroup">
-          <h3>AI, Agents &amp; LLM apps</h3>
+          <h3>Evals &amp; Testing</h3>
           <div class="tags">
-            <span class="tag">LLM app development</span><span class="tag">MCP servers</span>
-            <span class="tag">Agent gateways (Hermes)</span><span class="tag">Claude · OpenAI · Gemini</span>
-            <span class="tag">RAG · Qdrant</span><span class="tag">LangChain</span>
-            <span class="tag">Prompt / context engineering</span><span class="tag">n8n · Zapier</span>
+            <span class="tag">Agent eval suites</span><span class="tag">LLM-as-judge</span>
+            <span class="tag">Retrieval metrics · R@k</span><span class="tag">Reply-classifier evals</span>
+            <span class="tag">pytest · offline tests</span><span class="tag">Regression / CI evals</span>
+          </div>
+        </div>
+        <div class="stackgroup">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Dart</span>
+            <span class="tag">JavaScript</span><span class="tag">SQL / NoSQL</span>
           </div>
         </div>
         <div class="stackgroup">
@@ -283,8 +299,8 @@
         <div class="traj">
           <div class="step"><div class="yr">Foundation</div><div class="lbl">Ingeniería de Sonido — DSP, acoustics, signals &amp; a full math/physics/electronics core</div></div>
           <div class="step"><div class="yr">2023 — Present</div><div class="lbl">Independent software &amp; applied AI — data/ML, audio deep learning, mobile products, and agent prototypes</div></div>
-          <div class="step"><div class="yr">Jan — Sep 2025</div><div class="lbl">TrackFlow at Skill Stackers — Flutter, Clean Architecture, offline-first sync, and native macOS</div></div>
-          <div class="step"><div class="yr">Jan 2026 — Present</div><div class="lbl">Full-stack product engineering and production AI integrations at Carbon Voice</div></div>
+          <div class="step"><div class="yr">Sep 2024 — Jan 2025</div><div class="lbl">TrackFlow at Skill Stackers — Flutter, Clean Architecture, offline-first sync, and native macOS</div></div>
+          <div class="step"><div class="yr">Jan 2025 — Present</div><div class="lbl">Full-stack product engineering and production AI integrations at Carbon Voice</div></div>
         </div>
       </div>
 
@@ -313,15 +329,15 @@
         <h2 class="sec">Experience</h2>
         <div class="job-head">
           <p class="job-title">Software Engineer <span class="at">· Carbon Voice</span></p>
-          <span class="job-meta">Jan 2026 — Present · San Francisco, CA · Remote</span>
+          <span class="job-meta">Jan 2025 — Present · San Francisco, CA · Remote</span>
         </div>
         <p class="job-sub">Building AI-powered product capabilities end-to-end across mobile, web, backend, and integrations for a voice-first collaboration platform.</p>
         <ul class="achv">
-          <li><span class="h">Expanded the product across four platforms:</span> iOS, Android, macOS, and Web, delivering capabilities across messaging, workspaces, authentication, voice workflows, onboarding, and administration.</li>
-          <li><span class="h">Built identity and access systems for enterprise use cases,</span> including federated authentication, SSO discovery, permissions, and secure session continuity.</li>
+          <li><span class="h">Shipped agent and MCP integrations into production</span> — hand-rolled reasoning loops over LLM APIs (Claude), tool-calling, and a single permission boundary — with user-controlled approvals, output guardrails, and real-time status, moving AI from prototype to safe production use.</li>
+          <li><span class="h">Made agent behavior measurable and safe to ship</span> — built offline evaluation suites (including a reply-classifier over agent responses), regression checks, and metric-driven iteration, backed by OpenTelemetry observability across real-time services.</li>
           <li><span class="h">Created a workflow automation ecosystem with 10 actions and 10 triggers,</span> enabling teams to connect communication workflows with external tools.</li>
-          <li><span class="h">Developed agent and MCP integrations</span> with user-controlled permissions, approval flows, and real-time status, helping move AI capabilities from prototypes into safe production use.</li>
-          <li><span class="h">Improved operational visibility and platform reliability</span> through internal administration tools, real-time services, and observability.</li>
+          <li><span class="h">Built identity and access systems for enterprise use cases,</span> including federated authentication, SSO discovery, permissions, and secure session continuity.</li>
+          <li><span class="h">Expanded the product across four platforms:</span> iOS, Android, macOS, and Web, delivering messaging, workspaces, authentication, voice workflows, onboarding, and administration.</li>
           <li><span class="h">Extended product distribution</span> through shareable web experiences and an embeddable audio player.</li>
         </ul>
       </section>
@@ -335,14 +351,14 @@
         <ul class="achv">
           <li><span class="h">Built Kairos, an AI-powered journal product</span> using Flutter, Firebase, Genkit/Gemini, memory, retrieval, and tool-calling workflows.</li>
           <li><span class="h">Developed production-oriented foundations</span> spanning Clean Architecture, dependency injection, navigation, design systems, API error handling, multiple environments, and CI.</li>
-          <li><span class="h">Created applied-AI prototypes</span> in speech denoising, MCP, Google ADK, retrieval, memory, tool calling, and agent-to-UI patterns.</li>
+          <li><span class="h">Created applied-AI prototypes across agents and retrieval</span> — Google ADK multi-agent systems, hybrid RAG, MCP, memory, and tool-calling — with an eval-first workflow (retrieval metrics, LLM-as-judge, offline test suites).</li>
         </ul>
       </section>
 
       <section class="job">
         <div class="job-head">
           <p class="job-title">Flutter Developer <span class="at">· Skill Stackers</span></p>
-          <span class="job-meta">Jan — Sep 2025 · Valletta, Malta · Remote</span>
+          <span class="job-meta">Sep 2024 — Jan 2025 · Valletta, Malta · Remote</span>
         </div>
         <p class="job-sub">Built TrackFlow, a cross-platform music collaboration product for artists and producers using Flutter.</p>
         <ul class="achv">
@@ -356,9 +372,19 @@
         <h2 class="sec">Selected Projects</h2>
         <div class="projgrid">
           <div class="proj">
+            <div class="proj-head"><span class="proj-name">Factory Ops Assistant</span><span class="proj-tag">Agentic AI · Google ADK</span></div>
+            <p>Multi-agent assistant on <b>Google ADK</b> (Python) over a <b>hybrid-RAG</b> knowledge base — dense embeddings + BM25 fused with <b>RRF</b> and an LLM reranker — served as a <b>FastAPI</b> microservice. Eval-first: retrieval <b>R@1 up to 1.00</b>, <b>agent evals 9/9</b>, 20 offline tests.</p>
+            <div class="mini"><span class="tag">Google ADK</span><span class="tag">Qdrant</span><span class="tag">FastAPI</span><span class="tag">Gemini</span><span class="tag">Evals</span></div>
+          </div>
+          <div class="proj">
             <div class="proj-head"><span class="proj-name">Kairos</span><span class="proj-tag">Applied AI · Flutter</span></div>
             <p>AI-powered journal product combining a cross-platform Flutter experience with Firebase and <b>Genkit/Gemini</b>. Explores memory, retrieval and tool-calling workflows to turn personal context into useful, user-controlled assistance.</p>
             <div class="mini"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Genkit</span><span class="tag">Gemini</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><span class="proj-name">Agent Experiments</span><span class="proj-tag">Applied AI</span></div>
+            <p>Companion agent prototypes — an <b>MCP</b> server in TypeScript and <em>a2ui</em> (agent-to-UI) — exploring tool use, orchestration and agent-driven interfaces alongside the ADK work above.</p>
+            <div class="mini"><span class="tag">MCP</span><span class="tag">TypeScript</span><span class="tag">a2ui</span></div>
           </div>
           <div class="proj">
             <div class="proj-head"><span class="proj-name">PyTorch Speech Denoiser</span><span class="proj-tag">ML · take-home</span></div>
@@ -369,11 +395,6 @@
             <div class="proj-head"><span class="proj-name">Flutter Blueprint</span><span class="proj-tag">Open source</span></div>
             <p>Production-ready Flutter starter codifying Clean Architecture, GetIt/Injectable DI, GoRouter, a full Material 3 design-token system, Dio + <code>Result</code> error handling, multi-flavor builds and CI — the reusable foundation behind several apps.</p>
             <div class="mini"><span class="tag">flavorizr</span><span class="tag">very_good_analysis</span><span class="tag">GH Actions</span></div>
-          </div>
-          <div class="proj">
-            <div class="proj-head"><span class="proj-name">Agent Experiments</span><span class="proj-tag">Applied AI</span></div>
-            <p>Multi-agent prototypes on <b>Google ADK</b> (Python) and an MCP/TypeScript counterpart, plus <em>a2ui</em> (agent-to-UI) — exploring agent orchestration, tool use and MCP ahead of the production integration work.</p>
-            <div class="mini"><span class="tag">Google ADK</span><span class="tag">MCP</span><span class="tag">OpenAPI</span></div>
           </div>
         </div>
       </section>
